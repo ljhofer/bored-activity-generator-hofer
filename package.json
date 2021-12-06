@@ -1,0 +1,21 @@
+{
+  "name": "bored",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljhofer/bored-activity-generator-hofer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ljhofer/bored-activity-generator-hofer/issues"
+  },
+  "homepage": "https://github.com/ljhofer/bored-activity-generator-hofer#readme",
+  "dependencies": {}
+}
