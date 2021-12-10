@@ -8,11 +8,12 @@ function App() {
     
     <Router>
       <div className="flex-column justify-center align-center min-100-vh bg-primary">
-
+        <Routes>
           <Route exact path="/" component={Home} />
           {/* <Route exact path="/product/:id" component={Product} />
           <Route path='*'>
           </Route> */}
+        </Routes>  
       </div>
     </Router>
   );
