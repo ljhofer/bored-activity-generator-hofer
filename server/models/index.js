@@ -1,5 +1,6 @@
 module.exports = {
     Activity: require("./Activity"),
     User: require("./User"),
-    Comment: require("./Comment")
+    Comment: require("./Comment"),
+    Post: require("./Post")
   };

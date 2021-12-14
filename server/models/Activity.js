@@ -18,17 +18,13 @@ const ActivitySchema = new Schema({
   accessibility: {
     type: Number
   },
-  comments:[
+  posts:[
     {
       type: Schema.Types.ObjectId,
-      ref: 'Comment'
+      ref: 'Post'
     }
   ],
-}, 
-{ 
-  timestamps: true
 }
-
 );
 
 const Activity = mongoose.model("Activity", ActivitySchema);
