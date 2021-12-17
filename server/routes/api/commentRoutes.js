@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const { addComment, updateComment, deleteComment};
+const { addComment, updateComment, deleteComment} = require('../../controllers/CommentController');
 
 
 router.route("/").post(addComment);
