@@ -1,21 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import Home from './components/pages/Home';
+import React from "react";
+import Header from "./components/Header";
+import Container from "./components/Container";
+import Footer from "./components/Footer";
 
 
 function App() {
   return (
-    
-    <Router>
-      <div className="flex-column justify-center align-center min-100-vh bg-primary">
-        <Routes>
-          <Route exact path="/" component={Home} />
-          {/* <Route exact path="/product/:id" component={Product} />
-          <Route path='*'>
-          </Route> */}
-        </Routes>  
-      </div>
-    </Router>
+    <div>
+      <Header />
+      <Container />
+      <Footer />
+    </div>
   );
 }
 
