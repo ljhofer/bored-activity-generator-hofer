@@ -10,7 +10,7 @@ function Home () {
     return (
         <div>
 
-
+            <h1>I am the Home componenet!</h1>
         
         </div>
     )
