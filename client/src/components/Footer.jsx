@@ -4,12 +4,16 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 // Styling for the HTML elements generated with this component
 const styles = {
     footerIcon: {
-      margin: 25,
-      fontSize: '2em',
-      color: 'black'
+        margin: 25,
+        fontSize: '2em',
+        color: 'black'
     },
     footer: {
-      backgroundColor: '#8d968e',
+        backgroundColor: '#8d968e',
+        textAlign:"center"
+    },
+    h3: {
+        paddingTop: 25
     }
   };
 
@@ -20,7 +24,7 @@ function Footer () {
 
     return (
         <footer style={styles.footer} className="footer">
-            <p>Created by Laura Hofer</p>
+            <h3 style={styles.h3}>Created by Laura Hofer</h3>
             <div className="container text-center">
             <a 
                 href="https://github.com/ljhofer" 
