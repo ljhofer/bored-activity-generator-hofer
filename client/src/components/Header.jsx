@@ -7,7 +7,8 @@ import { FiLogOut } from "react-icons/fi";
 const styles = {
     header: {
         backgroundColor: '#8d968e',
-        textAlign:"center"
+        display: "flex",
+        justifyContent:"center"
     },
 }
 
@@ -18,8 +19,7 @@ function Header () {
 
 
     return (
-        <header style={styles.header}>
-            <div className="row">
+        <header className="row" style={styles.header}>
                 <Nav className="justify-content-center">
                     <Nav.Item>
                         <Nav.Link href=""><div className= "bi d-flex justify-content-center mx-auto mb-1"><FaHome style={{fontSize: "2.5rem", color: "black"}} /></div>
@@ -42,7 +42,7 @@ function Header () {
                         </Nav.Link>
                     </Nav.Item>
                 </Nav>
-            </div>
+           
         </header>
     )
 }

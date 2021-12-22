@@ -1,9 +1,9 @@
 const router = require("express").Router();
 
-const { addComment, updateComment, deleteComment} = require('../../controllers/CommentController');
+const { createComment, updateComment, deleteComment} = require('../../controllers/CommentController');
 
 
-router.route("/").post(addComment);
+router.route("/").post(createomment);
 router.route("/:id").put(updateComment);
 router.route("/:id").delete(deleteComment);
 
