@@ -1,7 +1,5 @@
 const { Comment, User } = require("../models");
 
-// addComment, updateComment, deleteComment
-
 module.exports = {
 
     async createComment(req, res) {
@@ -16,7 +14,7 @@ module.exports = {
 
     }, 
 
-    async editComment(req, res) {
+    async updateComment(req, res) {
         const comment = await Comment.findOneAndUpdate({ _id: req.params.id }, {text:req.body});
 
         if (!comment) {
@@ -24,5 +22,19 @@ module.exports = {
         }
 
         res.status(200).json(comment);
+    }, 
+
+    async deleteComment(re, res) {
+        try {
+            const comment = await Comment.findById(req.params.id);
+            if (comment.userId === req.body.userId) {
+                await comment.deleteOne();
+                res.status(200).json("The comment has been deleted");
+            } else {
+                res.status(403).json("You can only delete your own comments.");
+            }
+        } catch (err) {
+            res.status(500).json(err);
+        }    
     }
 }
