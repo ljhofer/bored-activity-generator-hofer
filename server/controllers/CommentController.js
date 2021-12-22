@@ -14,5 +14,15 @@ module.exports = {
 
         res.status(200).json(comment);
 
+    }, 
+
+    async editComment(req, res) {
+        const comment = await Comment.findOneAndUpdate({ _id: req.params.id }, {text:req.body});
+
+        if (!comment) {
+            return res.status(400).json({ message: "Unable to update comment." });
+        }
+
+        res.status(200).json(comment);
     }
 }
