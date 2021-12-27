@@ -48,5 +48,20 @@ module.exports = {
         }
 
         res.status(200).json(post);
+    },
+
+    async deletePost(req, res) {
+        try {
+            const post = await Post.findById(req.params.id);
+
+            if (post.userId === req.body.userId) {
+                await Post.deleteOne();
+                res.status(200).json("The post has been deleted.");
+            } else {
+                res.status(403).json("You can only delete your own posts.");
+            }
+        } catch (err) {
+            res.status(500).json(err);
+        }
     }
 }
