@@ -1,6 +1,6 @@
 const { Post } = require("../models");
 
-// getPostById, updatePost, deletePost 
+// updatePost, deletePost 
 
 module.exports = {
 
@@ -38,5 +38,15 @@ module.exports = {
         }
 
         res.status(200).json(activity);
+    },
+
+    async updatePost(req, res) {
+        const post = await Post.findOneAndUpdate({ _id: req.params.id}, req.body);
+
+        if (!post) {
+            return res.status(400).json({ message: "Unable to update post."});
+        }
+
+        res.status(200).json(post);
     }
 }
