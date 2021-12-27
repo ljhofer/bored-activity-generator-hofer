@@ -1,6 +1,5 @@
 const { Activity } = require("../models");
 
-// getTopActivities, createActivity, getActivityById
 
 module.exports = {
 
@@ -12,25 +11,5 @@ module.exports = {
         }
         
         res.status(200).json(activity);
-    },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 }
