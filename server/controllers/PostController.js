@@ -1,6 +1,6 @@
 const { Post } = require("../models");
 
-// getPosts, getPostById, updatePost, deletePost 
+// getPostById, updatePost, deletePost 
 
 module.exports = {
 
@@ -28,5 +28,15 @@ module.exports = {
         }
 
         res.status(200).json(post);
+    },
+
+    async getPostById(req, res) {
+        const post = await Post.findOne({ _id: req.params.id});
+
+        if (!post) {
+            return res.status(400).json({ message: "No post with that ID found."});
+        }
+
+        res.status(200).json(activity);
     }
 }
