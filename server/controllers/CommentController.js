@@ -14,6 +14,17 @@ module.exports = {
 
     }, 
 
+
+    async getCommentById(req, res) {
+        const comment = await Comment.findOne({ _id: req.params.id})
+
+        if (!post) {
+            return res.status(400).json({ message: "No post with that ID found."});
+        }
+
+        res.status(200).json(post);
+    },
+
     async updateComment(req, res) {
         const comment = await Comment.findOneAndUpdate({ _id: req.params.id }, {text:req.body});
 
