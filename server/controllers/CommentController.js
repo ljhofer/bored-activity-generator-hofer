@@ -16,7 +16,6 @@ module.exports = {
 
 
     async getCommentById(req, res) {
-        console.log(req.params.id);
         const comment = await Comment.findOne({ _id: req.params.id })
 
         if (!comment) {
@@ -36,7 +35,7 @@ module.exports = {
         res.status(200).json(comment);
     }, 
 
-    async deleteComment(re, res) {
+    async deleteComment(req, res) {
         try {
             const comment = await Comment.findById(req.params.id);
             if (comment.userId === req.body.userId) {
@@ -47,6 +46,7 @@ module.exports = {
             }
         } catch (err) {
             res.status(500).json(err);
+            console.log(err);
         }    
     }
 }
