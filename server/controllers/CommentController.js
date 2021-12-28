@@ -16,17 +16,18 @@ module.exports = {
 
 
     async getCommentById(req, res) {
-        const comment = await Comment.findOne({ _id: req.params.id})
+        console.log(req.params.id);
+        const comment = await Comment.findOne({ _id: req.params.id })
 
-        if (!post) {
+        if (!comment) {
             return res.status(400).json({ message: "No post with that ID found."});
         }
 
-        res.status(200).json(post);
+        res.status(200).json(comment);
     },
 
     async updateComment(req, res) {
-        const comment = await Comment.findOneAndUpdate({ _id: req.params.id }, {text:req.body});
+        const comment = await Comment.findOneAndUpdate({ _id: req.params.id }, req.body);
 
         if (!comment) {
             return res.status(400).json({ message: "Unable to update comment." });

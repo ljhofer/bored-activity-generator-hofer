@@ -4,7 +4,7 @@ const { createComment, getCommentById, updateComment, deleteComment} = require('
 
 
 router.route("/").post(createComment);
-router.route("/:").get(getCommentById);
+router.route("/:id").get(getCommentById);
 router.route("/:id").put(updateComment);
 router.route("/:id").delete(deleteComment);
 
