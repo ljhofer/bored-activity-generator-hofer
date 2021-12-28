@@ -1,6 +1,5 @@
 const { Post } = require("../models");
 
-// updatePost, deletePost 
 
 module.exports = {
 
@@ -37,7 +36,7 @@ module.exports = {
             return res.status(400).json({ message: "No post with that ID found."});
         }
 
-        res.status(200).json(activity);
+        res.status(200).json(post);
     },
 
     async updatePost(req, res) {
