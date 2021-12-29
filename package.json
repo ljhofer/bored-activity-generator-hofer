@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/ljhofer/bored-activity-generator-hofer#readme",
   "dependencies": {
+    "bootstrap": "^5.1.3",
     "concurrently": "^6.4.0"
   }
 }
