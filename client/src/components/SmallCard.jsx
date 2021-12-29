@@ -9,11 +9,11 @@ function SmallCard () {
     return (
         <div>
             <Card style={{ width: '18rem' }}>
-                <Card.Header>Featured</Card.Header>
+                <Card.Header>Activity Name: </Card.Header>
                 <ListGroup variant="flush">
-                    <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                    <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                    <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                    <ListGroup.Item>Activity Type: </ListGroup.Item>
+                    <ListGroup.Item>Participants: </ListGroup.Item>
+                    <ListGroup.Item>Accessibility: </ListGroup.Item>
                 </ListGroup>
             </Card>
         </div>
