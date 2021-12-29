@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import SmallCard from "./SmallCard";
 
 
 
@@ -16,6 +17,7 @@ function Container () {
     return (
         <div>
             <h1>I am a container!</h1>
+            <SmallCard/>
             <Router>
                 <Routes>
                     <Route exact path="/" component={Home} />
