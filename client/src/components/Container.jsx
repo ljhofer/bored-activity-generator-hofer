@@ -5,6 +5,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import SmallCard from "./SmallCard";
+import LargeCard from "./LargeCard";
 
 
 
@@ -17,7 +18,8 @@ function Container () {
     return (
         <div>
             <h1>I am a container!</h1>
-            <SmallCard/>
+            <SmallCard />
+            <LargeCard />
             <Router>
                 <Routes>
                     <Route exact path="/" component={Home} />
