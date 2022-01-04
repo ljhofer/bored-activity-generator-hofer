@@ -1,10 +1,7 @@
 import React from "react";
-import {Component} from "react";
-
-class Dashboard extends Component{
 
 
-    render() {
+function Dashboard () {
 
         return (
             <div>
@@ -14,7 +11,7 @@ class Dashboard extends Component{
 
 
 
-    }
+
         
 }
 

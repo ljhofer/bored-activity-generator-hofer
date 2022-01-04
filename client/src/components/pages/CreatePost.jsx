@@ -1,17 +1,16 @@
 import React from "react";
-import { Component } from "react";
 
-class CreatePost extends Component {
 
-    render() {
-        return (
-            <div>
+function CreatePost () {
 
-                <h1>I am the CreatePost componenet!</h1>
+    return (
+        <div>
 
-            </div>
-        )
-    }       
+            <h1>I am the CreatePost componenet!</h1>
+
+        </div>
+    )
+          
 }
 
 export default CreatePost;
